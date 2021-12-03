@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activity"
+            type="com.example.pawonresto.model.Penawaran" />
+        <variable
+            name="dPengumuman"
+            type="com.example.pawonresto.ui.penawaran.DataPenawaran" />
+        <variable
+            name="data"
+            type="com.example.pawonresto.adapter.PenawaranRecycleViewAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_fragment_penawaran"
+        tools:context=".ui.penawaran.PenawaranFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/penawaran_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:adapter="@{data}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_penawaran" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
